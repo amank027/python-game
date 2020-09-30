@@ -1,6 +1,7 @@
 import random
 import tkinter
-
+import pyttsx3
+pyttsx3.speak("Welcome to game")
 stats = []
 
 
@@ -54,10 +55,14 @@ window.mainloop()
 
 for i in stats: print(i, end=" ")
 if stats.count('L') > stats.count('W'):
+    pyttsx3.speak("You lose the series")
     result = "\nYou loose the series."
 elif stats.count('L') == stats.count('W'):
+    pyttsx3.speak("Series ended with a draw")
     result = "\nSeries ended in a draw."
 else:
+    pyttsx3.speak("You win the series")
     result = "\nYou win the series."
 
 print(result)
+pyttsx3.speak("Thank you!")
